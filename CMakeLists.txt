@@ -10,7 +10,7 @@ pong.cpp
 set_target_properties(ping PROPERTIES AUTOMOC TRUE)
 set_target_properties(pong PROPERTIES AUTOMOC TRUE)
 
-find_package(Qt5 COMPONENTS Core CONFIG REQUIRED)
+find_package(Qt5 COMPONENTS Core DBus CONFIG REQUIRED)
 
 set(QT_LIB Qt5::Core Qt5::DBus)
 
