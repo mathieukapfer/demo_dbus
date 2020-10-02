@@ -1,5 +1,8 @@
-# demo_dbus
+# Demo_dbus
 dbus communication between C++ QT and python [WORK IN PROGRESS]
+
+# Dependencies
+sudo apt-get install qtbase5-dev 
 
 # Concept
 
