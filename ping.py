@@ -6,7 +6,7 @@ import dbus.glib
 
 # naming
 service_name   = 'my.service'
-object_path    = '/my/object/path'
+object_path    = '/path/to/object'
 interface_name = 'my.interface'
 
 class Emitter(dbus.service.Object):

@@ -83,7 +83,7 @@ int main(int argc, char **argv) {
 
   Pong pong;
   QDBusConnection::sessionBus().registerObject(
-      "/path/to/object", "", &pong, QDBusConnection::ExportAllSlots);
+      "/path/to/object", "my.interface", &pong, QDBusConnection::ExportAllSlots);
 
   app.exec();
   return 0;

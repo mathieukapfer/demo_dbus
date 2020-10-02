@@ -11,7 +11,7 @@ from gi.repository import GObject
 
 # naming
 service_name   = 'my.service' # 'sub.domain.tld'
-object_path    = '/my/object/path' # '/tld/domain/sub/Test'
+object_path    = '/path/to/object' # '/tld/domain/sub/Test'
 interface_name = 'my.interface' #'tld.domain.sub.TestInterface'
 
 class Test(dbus.service.Object):

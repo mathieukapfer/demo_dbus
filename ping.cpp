@@ -66,7 +66,7 @@ int main(int argc, char **argv) {
     return 1;
   }
 
-  QDBusInterface iface(SERVICE_NAME, "/path/to/object", "", QDBusConnection::sessionBus());
+  QDBusInterface iface(SERVICE_NAME, "/path/to/object", "my.interface", QDBusConnection::sessionBus());
   if (iface.isValid()) {
     QDBusReply<QString> reply = iface.call("ping", argc > 1 ? argv[1] : "");
     if (reply.isValid()) {

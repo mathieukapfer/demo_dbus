@@ -2,7 +2,7 @@
 dbus communication between C++ QT and python [WORK IN PROGRESS]
 
 # Dependencies
-sudo apt-get install qtbase5-dev 
+sudo apt-get install qtbase5-dev
 
 # Concept
 
@@ -11,8 +11,11 @@ n° | Level        | Name
 1 | bus | session
 2 | service | org.example.QtDBus.PingExample
 3 | object path | /path/to/object
-4 | interface | local.pong.Pong
+4 | interface | local.pong.Pong  ===> my.interface (1)
 5 | method | Ping
+
+(1) the name of interface depend of 'interface' parameter of QDBus api (QDBusInterface() QDBusConnection::sessionBus().registerObject). If value is "" then Qt build it as "local.<fileName>.<ObjectName>"
+
 
 # Run Qt sample with dbus-monitor
 
@@ -23,7 +26,7 @@ $ dbus-monitor --session &
 $ make
 ...
 <node>
-  <interface name="local.pong.Pong">
+  <interface name="local.pong.Pong">             ===>   <interface name="my.interface">
     <method name="ping">
       <arg type="s" direction="out"/>
       <arg name="arg" type="s" direction="in"/>
