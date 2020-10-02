@@ -26,8 +26,8 @@ test-pong:  build-test
 test-pong-py:
 	python pong.py &
 	sleep 1
-	gdbus introspect --session --dest "sub.domain.tld" --object-path "/tld/domain/sub/Test"
-	gdbus call --session --dest "sub.domain.tld" --object-path "/tld/domain/sub/Test"  --method "tld.domain.sub.TestInterface.foo"
+	gdbus introspect --session --dest "my.service" --object-path "/my/object/path"
+	gdbus call --session  --dest "my.service" --object-path "/my/object/path" --method "my.interface.foo"
 
 test-ping:
 	export LD_LIBRARY_PATH=$(LD_LIBRARY_PATH) && $(BUILD_PATH)/ping
@@ -37,7 +37,7 @@ test-py:
 	python pong.py &
 	sleep 1
 	echo "call foo method"
-	gdbus call --session  --dest "sub.domain.tld" --object-path "/tld/domain/sub/Test" --method tld.domain.sub.TestInterface.foo
+	gdbus call --session  --dest "my.service" --object-path "/my/object/path" --method "my.interface.foo"
 	echo "run ping.py"
 	python ping.py
 

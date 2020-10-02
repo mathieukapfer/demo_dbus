@@ -9,10 +9,10 @@ import gi
 gi.require_version("Gtk", "3.0")
 from gi.repository import GObject
 
-# matk param
-service_name   = 'sub.domain.tld'
-object_path    = '/tld/domain/sub/Test'
-interface_name = 'tld.domain.sub.TestInterface'
+# naming
+service_name   = 'my.service' # 'sub.domain.tld'
+object_path    = '/my/object/path' # '/tld/domain/sub/Test'
+interface_name = 'my.interface' #'tld.domain.sub.TestInterface'
 
 class Test(dbus.service.Object):
     """Reciever test class."""
@@ -100,7 +100,7 @@ bus.add_signal_receiver(catchall_handler,
                         interface_keyword='dbus_interface',
                         member_keyword='member')
 bus.add_signal_receiver(quit_handler,
-                        dbus_interface='tld.domain.sub.event',
+                        dbus_interface=service_name + "." + interface_name,
                         signal_name='quit_signal')
 
 loop.run()
