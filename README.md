@@ -6,13 +6,13 @@ sudo apt-get install qtbase5-dev
 
 # Concept
 
-Level        | Name
------------- | -------------
-bus | session
-service | org.example.QtDBus.PingExample
-object path | /path/to/object
-interface | local.pong.Pong
-method | Ping
+n° | Level        | Name
+--|---------- | -------------
+1 | bus | session
+2 | service | org.example.QtDBus.PingExample
+3 | object path | /path/to/object
+4 | interface | local.pong.Pong
+5 | method | Ping
 
 # Run Qt sample with dbus-monitor
 
