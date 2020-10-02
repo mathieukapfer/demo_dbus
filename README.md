@@ -14,7 +14,7 @@ n° | Level        | Name
 4 | interface | local.pong.Pong  ===> my.interface (1)
 5 | method | Ping
 
-(1) If the name of interface is defined as "" in QDBusInterface() and QDBusConnection::sessionBus().registerObject), then Qt built it as 'local.\<fileName\>.\<ObjectName\>'
+(1) If the name of interface is defined as "" in `QDBusInterface()` and `QDBusConnection::sessionBus().registerObject`, then Qt built it as `"local.\<fileName\>.\<ObjectName\>"`
 
 
 # Run Qt sample with dbus-monitor
