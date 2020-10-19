@@ -48,3 +48,12 @@ method return time=1601639817.778610 sender=:1.102 -> destination=:1.103 serial=
 Reply was: ping("") got called
 ...
 ```
+
+
+# graphic tool
+
+Use D-Feet:  
+  - Install: ``` sudo apt-get d-feet ```
+  - run: ```d-feet ```
+  
+  
